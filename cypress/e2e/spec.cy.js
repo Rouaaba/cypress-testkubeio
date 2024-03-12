@@ -6,6 +6,7 @@ describe('Check content in Testkube documentation', function() {
     it('Check section copy', function() {
         // Modify the selector based on the actual class or ID of the section containing the copy
         // For example, if the copy is within a div element with class 'article-content'
-        cy.contains('testkube agent debug');
+        cy.contains('testkube agent debug', { timeout: 20000 }).should('be.visible');
+
     });
 });
